@@ -2,7 +2,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: cluster-config
+  name: infrastructure-application
 spec:
   destination:
     namespace: 'infrastructure-application'
