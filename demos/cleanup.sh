@@ -15,5 +15,6 @@ oc label namespace application-guestbook argocd.argoproj.io/managed-by=openshift
 oc create namespace application-doodad
 oc label namespace application-doodad argocd.argoproj.io/managed-by=openshift-gitops
 
-# Demo 3
-
+# Open browser for login
+google-chrome https://console-openshift-console.apps.skrenger.sandbox2566.opentlc.com/
+google-chrome https://openshift-gitops-server-openshift-gitops.apps.skrenger.sandbox2566.opentlc.com 

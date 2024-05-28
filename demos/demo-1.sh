@@ -4,7 +4,6 @@
 #doitlive commentecho: true
 
 oc get argocd -A
-
 oc new-project development-argocd
 
 # Create a new Argo CD instance
@@ -23,3 +22,5 @@ oc get pods
 head demo-1/repository.yaml
 oc apply -f demo-1/repository.yaml
 oc get secret
+
+# Review Console
