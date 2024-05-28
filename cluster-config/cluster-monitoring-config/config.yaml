@@ -1,0 +1,7 @@
+---
+prometheusK8s:
+  retention: 24h 
+  resources:
+    requests:
+      cpu: 200m 
+      memory: 2Gi 

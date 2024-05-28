@@ -1,0 +1,15 @@
+---
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+metadata:
+  name: cluster-config
+resources:
+- network.yaml
+- proxy.yaml
+configMapGenerator:
+- name: cluster-monitoring-config
+  namespace: openshift-monitoring
+  files:
+  - cluster-monitoring-config/config.yaml
+  options:
+    disableNameSuffixHash: true
