@@ -27,7 +27,7 @@ spec:
         deployment: echoenv-infra
     spec:
       containers:
-      - image: quay.io/simonkrenger/echoenv:latest
+      - image: quay.io/simonkrenger/echoenv:fabdb690
         imagePullPolicy: IfNotPresent
         name: echoenv-infra
         ports:

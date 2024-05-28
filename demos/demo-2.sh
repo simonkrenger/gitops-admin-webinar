@@ -17,3 +17,7 @@ cat demo-2/appset.yaml
 oc apply -f demo-2/appset.yaml
 
 # Kustomize
+tree ../cluster-config/
+cat ../cluster-config/kustomization.yaml
+cat ../cluster-config/cluster-monitoring-config.yaml
+oc get configmap cluster-monitoring-config -n openshift-monitoring
