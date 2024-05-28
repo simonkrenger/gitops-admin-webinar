@@ -1,0 +1,29 @@
+---
+apiVersion: argoproj.io/v1alpha1
+kind: ApplicationSet
+metadata:
+  name: appset-example
+spec:
+  goTemplate: true
+  goTemplateOptions: ["missingkey=error"]
+  generators:
+  - list:
+      elements:
+      - appname: guestbook
+      - appname: doodad
+  template:
+    metadata:
+      name: 'application-{{.appname}}'
+    spec:
+      project: default
+      source:
+        repoURL: https://github.com/simonkrenger/gitops-basics-demos.git
+        targetRevision: HEAD
+        path: "demos/demo-2/resources/"
+      destination:
+        server: https://kubernetes.default.svc
+        namespace: application-{{.appname}}
+      syncPolicy:
+        automated:
+          prune: true
+          selfHeal: true

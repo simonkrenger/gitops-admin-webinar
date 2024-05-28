@@ -1,0 +1,12 @@
+kind: Secret
+apiVersion: v1
+metadata:
+ name: repo-gitops-basics-demos
+ namespace: development-argocd
+ labels:
+   argocd.argoproj.io/secret-type: repository
+stringData:
+ project: default
+ type: git
+ url: https://github.com/simonkrenger/gitops-basics-demos.git
+type: Opaque
